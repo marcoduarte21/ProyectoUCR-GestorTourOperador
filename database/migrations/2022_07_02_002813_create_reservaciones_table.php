@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('reservaciones', function (Blueprint $table) {
             $table->id('numeroDeReserva');
-            $table->string('numeroDeVuelo');
+            $table->foreignId('numeroDeVuelo')->nullable();
             $table->date('fecha');
             $table->integer('monto');
             $table->integer('NumeroDePasajeros');

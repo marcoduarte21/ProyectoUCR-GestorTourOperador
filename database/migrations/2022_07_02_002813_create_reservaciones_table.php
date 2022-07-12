@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reservaciones', function (Blueprint $table) {
+        Schema::create('reservacions', function (Blueprint $table) {
             $table->id('numeroDeReserva');
             $table->foreignId('numeroDeVuelo')->nullable();
             $table->date('fecha');
             $table->integer('monto');
-            $table->integer('NumeroDePasajeros');
+            $table->integer('pasajeros');
             $table->text('observaciones'); //textarea
 
             $table->timestamps(); // created_at updated_at
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reservaciones');
+        Schema::dropIfExists('reservacions');
     }
 };

@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 
 class ReservationSeeder extends Seeder
 {
+
     /**
      * Run the database seeds.
      *
@@ -15,6 +16,6 @@ class ReservationSeeder extends Seeder
      */
     public function run()
     {
-        
+        reservacion::Factory(50)->create();
     }
 }
